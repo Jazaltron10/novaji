@@ -1,23 +1,17 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Registration</title>
+    <title>User Registration</title>
 </head>
-{%block content%}
 <body>
-    <form method="post">
-        {% csrf_token %}
-        <input name="f_ame", placeholder="your first name"/>
-        <input name="l_ame", placeholder="your last name"/>
-        <input name="Phone", placeholder="phone number"/>
-        <input name="Email" , placeholder="email"/>
-        <input name="Password"/>
-        <input name="Date_of_birth"/>
-    <form/>
+    <article class="container">        
+        <h1>Register</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</article>
 </body>
-{%endblock %}
 </html>
