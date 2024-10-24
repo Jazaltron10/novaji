@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+</head>
+{%block content%}
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input name="f_ame", placeholder="your first name"/>
+        <input name="l_ame", placeholder="your last name"/>
+        <input name="Phone", placeholder="phone number"/>
+        <input name="Email" , placeholder="email"/>
+        <input name="Password"/>
+        <input name="Date_of_birth"/>
+    <form/>
+</body>
+{%endblock %}
+</html>
